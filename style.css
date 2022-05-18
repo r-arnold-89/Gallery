@@ -1,0 +1,217 @@
+
+
+
+/*header nad nav styling*/
+* {
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(rgba(74.0, 100.0, 108.0, 1.0), rgba(74.0, 100.0, 108.0, 0.2)) ;
+}
+
+li, a, button {
+    color: #edf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px
+}
+h3 {
+    color: #edf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo {
+    width:6rem;
+    height: 6rem;
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+nav {
+    order: 1;
+}
+
+.nav-links {
+    list-style: none; 
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav-links li:nth-child(1) {
+    padding: 0 20px 0 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover {
+    color: #0088a9
+}
+.cta {
+    order: 2;
+}
+.contact-btn {
+    padding: 9px 25px;
+    margin-right: 30px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all(0.3s ease 0s);
+}
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+/*body styling*/
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.columns {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap; 
+    align-content: space-between;
+    text-align: center;
+}
+
+.columns > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    
+}
+
+.index-images {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.pic-des {
+    transition: transform .2s;
+}
+.pic-des:hover {
+    transform: scale(1.5);
+    padding: 15px;
+}
+@media screen and (max-width: 620px){
+    .columns, .nav-links li {
+        display: block;
+    }
+    .cta {
+        margin: auto;
+    }
+};
+
+
+
+
+/*Gallery styling*/
+
+@media screen and (min-width: 1000px){
+    .carousel {
+        max-width: 800px;
+        width: 80%;
+        object-fit: cover;
+    }
+}
+.carousel {
+    position: relative;
+    height: 600px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.carousel_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel_track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel_track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position:relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width:100%;
+}
+
+.carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: rgba(0,136,169,1);;
+    border-radius: 50%;
+}
+
+.carousel_button--left {
+    left: -15px;
+}
+
+.carousel_button--right {
+    right: -30px;
+}
+
+.carousel_nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    
+}
+
+.carousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,136,169,1);;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel_indicator.current-slide {
+    background: rgba(100,136,169,1);;
+}
+
+.is-hidden {display:none;}
+
+
+
